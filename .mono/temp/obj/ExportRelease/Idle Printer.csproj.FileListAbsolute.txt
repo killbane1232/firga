@@ -1,0 +1,6 @@
+D:\firga\.mono\temp\bin\ExportRelease\Idle Printer.dll
+D:\firga\.mono\temp\bin\ExportRelease\Idle Printer.pdb
+D:\firga\.mono\temp\obj\ExportRelease\Idle Printer.csprojAssemblyReference.cache
+D:\firga\.mono\temp\obj\ExportRelease\Idle Printer.csproj.CoreCompileInputs.cache
+D:\firga\.mono\temp\obj\ExportRelease\Idle Printer.dll
+D:\firga\.mono\temp\obj\ExportRelease\Idle Printer.pdb

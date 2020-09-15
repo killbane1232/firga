@@ -17,10 +17,22 @@ func _ready():
 
 
 func _on_Button_pressed():
-	translate(Vector3(-8,0,0))
+	translate(Vector3(-7.5,0,0))
 	pass # Replace with function body.
 
 
 func _on_Button2_pressed():
-	translate(Vector3(8,0,0))
+	translate(Vector3(7.5,0,0))
+	pass # Replace with function body.
+
+
+func _on_Button2_gui_input(event):
+	if event is InputEventScreenTouch:
+		translate(Vector3(7.5,0,0))
+	pass # Replace with function body.
+
+
+func _on_Button_gui_input(event):
+	if event is InputEventScreenTouch:
+		translate(Vector3(-7.5,0,0))
 	pass # Replace with function body.
