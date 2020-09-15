@@ -6,3 +6,4 @@ android/build/build.gradle
 .mono/metadata/ide_messaging_meta.txt
 *.txt
 *.cfg
+.mono/metadata/ide_messaging_meta.txt
