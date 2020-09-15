@@ -1,0 +1,319 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://CameraCont.gd" type="Script" id=1]
+[ext_resource path="res://AddPlate.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CubeMesh" id=8]
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.239216, 0.403922, 0.482353, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=10]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.603922, 0.282353, 0.196078, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.760784, 0.560784, 0.282353, 1 )
+roughness = 0.0
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.760784, 0.560784, 0.282353, 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.768627, 0.411765, 0.0627451, 1 )
+
+[node name="Spatial" type="Spatial"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.0167418, 3.89401, 1.71176 )
+near = 1.55
+far = 9.0
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="Camera"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 10.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Camera/Control"]
+anchor_left = 0.003
+anchor_top = 0.431
+anchor_right = 0.091
+anchor_bottom = 0.505
+margin_left = -0.24357
+margin_top = 0.133728
+margin_right = -0.355576
+margin_bottom = -0.0062561
+hint_tooltip = "left"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Camera/Control"]
+anchor_left = 0.913245
+anchor_top = 0.42023
+anchor_right = 1.00114
+anchor_bottom = 0.494
+hint_tooltip = "left"
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Right"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Room" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03701, 2.2504 )
+
+[node name="Printers" type="Spatial" parent="Room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289005, 0, -4.29144 )
+
+[node name="floor" type="MeshInstance" parent="Room"]
+transform = Transform( 4.06422, 0, 0, 0, 0.287494, 0, 0, 0, 3.3738, 0, -2.0105, -2.94005 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 9 )
+
+[node name="StaticBody" type="StaticBody" parent="Room/floor"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room/floor/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Wall L" type="MeshInstance" parent="Room"]
+transform = Transform( 0.223303, 0, 0, 0, 2.83388, 0, 0, 0, 3.01278, -3.88801, 0.300184, -4.15871 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 4 )
+
+[node name="StaticBody" type="StaticBody" parent="Room/Wall L"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room/Wall L/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Wall F" type="MeshInstance" parent="Room"]
+transform = Transform( 3.99093, 0, 0, 0, 2.28086, 0, 0, 0, 0.218087, 0, 0.405333, -5.51561 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="Room/Wall F"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room/Wall F/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Wall R" type="MeshInstance" parent="Room"]
+transform = Transform( 0.261699, 0, 0, 0, 2.67213, 0, 0, 0, 2.95972, 3.78955, 0.489319, -4.09956 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 6 )
+
+[node name="StaticBody" type="StaticBody" parent="Room/Wall R"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room/Wall R/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Table" type="Spatial" parent="Room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.74133, 0 )
+
+[node name="table" type="MeshInstance" parent="Room/Table"]
+transform = Transform( 1.12754, 0, 0, 0, 0.0737754, 0, 0, 0, 0.701841, -0.82769, 1.38378, -4.35861 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room/Table/table"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room/Table/table/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="table leg1" type="MeshInstance" parent="Room/Table"]
+transform = Transform( 0.068, 0, 0, 0, 0.68, 0, 0, 0, 0.068, -1.83541, 0.68634, -3.87789 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room/Table/table leg1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room/Table/table leg1/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="table  leg2" type="MeshInstance" parent="Room/Table"]
+transform = Transform( 0.068, 0, 0, 0, 0.68, 0, 0, 0, 0.068, -1.83541, 0.663393, -4.95282 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room/Table/table  leg2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room/Table/table  leg2/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="table  leg3" type="MeshInstance" parent="Room/Table"]
+transform = Transform( 0.068, 0, 0, 0, 0.679999, 0, 0, 0, 0.0679999, 0.182114, 0.663173, -4.95329 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room/Table/table  leg3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room/Table/table  leg3/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="table  leg4" type="MeshInstance" parent="Room/Table"]
+transform = Transform( 0.068, 0, 0, 0, 0.68, 0, 0, 0, 0.068, 0.182184, 0.68634, -3.87789 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room/Table/table  leg4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room/Table/table  leg4/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Light Bulb" type="OmniLight" parent="Room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07325, -2.78338 )
+light_energy = 0.65
+light_indirect_energy = 3.58
+light_specular = 0.24
+light_bake_mode = 2
+shadow_enabled = true
+shadow_bias = 0.05
+omni_range = 7.1
+
+[node name="Room2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97844, 2.03701, 2.2504 )
+
+[node name="Printers" type="Spatial" parent="Room2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289005, 0, -4.29144 )
+
+[node name="Spatial" parent="Room2" instance=ExtResource( 2 )]
+
+[node name="Spatial2" parent="Room2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.373577, -0.287279, -4.25501 )
+
+[node name="floor" type="MeshInstance" parent="Room2"]
+transform = Transform( 4.06422, 0, 0, 0, 0.287494, 0, 0, 0, 3.3738, 0, -2.0105, -2.94005 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 9 )
+
+[node name="StaticBody" type="StaticBody" parent="Room2/floor"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room2/floor/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Wall L" type="MeshInstance" parent="Room2"]
+transform = Transform( 0.223303, 0, 0, 0, 2.83388, 0, 0, 0, 3.01278, -3.88801, 0.300184, -4.15871 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 4 )
+
+[node name="StaticBody" type="StaticBody" parent="Room2/Wall L"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room2/Wall L/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Wall F" type="MeshInstance" parent="Room2"]
+transform = Transform( 3.99093, 0, 0, 0, 2.28086, 0, 0, 0, 0.218087, 0, 0.405333, -5.51561 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="Room2/Wall F"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room2/Wall F/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Wall R" type="MeshInstance" parent="Room2"]
+transform = Transform( 0.261699, 0, 0, 0, 2.67213, 0, 0, 0, 2.95972, 3.78955, 0.489319, -4.09956 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 6 )
+
+[node name="StaticBody" type="StaticBody" parent="Room2/Wall R"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room2/Wall R/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Table" type="Spatial" parent="Room2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.74133, 0 )
+
+[node name="table" type="MeshInstance" parent="Room2/Table"]
+transform = Transform( 1.12754, 0, 0, 0, 0.0737754, 0, 0, 0, 0.701841, -0.82769, 1.38378, -4.35861 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room2/Table/table"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room2/Table/table/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="table leg1" type="MeshInstance" parent="Room2/Table"]
+transform = Transform( 0.068, 0, 0, 0, 0.68, 0, 0, 0, 0.068, -1.83541, 0.68634, -3.87789 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room2/Table/table leg1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room2/Table/table leg1/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="table  leg2" type="MeshInstance" parent="Room2/Table"]
+transform = Transform( 0.068, 0, 0, 0, 0.68, 0, 0, 0, 0.068, -1.83541, 0.663393, -4.95282 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room2/Table/table  leg2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room2/Table/table  leg2/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="table  leg3" type="MeshInstance" parent="Room2/Table"]
+transform = Transform( 0.068, 0, 0, 0, 0.679999, 0, 0, 0, 0.0679999, 0.182114, 0.663173, -4.95329 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room2/Table/table  leg3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room2/Table/table  leg3/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="table  leg4" type="MeshInstance" parent="Room2/Table"]
+transform = Transform( 0.068, 0, 0, 0, 0.68, 0, 0, 0, 0.068, 0.182184, 0.68634, -3.87789 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Room2/Table/table  leg4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room2/Table/table  leg4/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Light Bulb" type="OmniLight" parent="Room2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07325, -2.78338 )
+light_energy = 0.65
+light_indirect_energy = 3.58
+light_specular = 0.24
+light_bake_mode = 2
+shadow_enabled = true
+shadow_bias = 0.05
+omni_range = 7.1
+
+[node name="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31942, 1.76631, -2.05009 )
+
+[node name="Spatial2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341485, 1.76631, -2.05009 )
+
+[node name="Spatial3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341485, 1.76631, -2.05009 )
+[connection signal="button_down" from="Camera/Control/Button" to="Camera" method="_on_Button_button_down"]
+[connection signal="gui_input" from="Camera/Control/Button" to="Camera" method="_on_Button_gui_input"]
+[connection signal="pressed" from="Camera/Control/Button" to="Camera" method="_on_Button_pressed"]
+[connection signal="button_down" from="Camera/Control/Button2" to="Camera" method="_on_Button2_button_down"]
+[connection signal="gui_input" from="Camera/Control/Button2" to="Camera" method="_on_Button2_gui_input"]
+[connection signal="pressed" from="Camera/Control/Button2" to="Camera" method="_on_Button2_pressed"]
