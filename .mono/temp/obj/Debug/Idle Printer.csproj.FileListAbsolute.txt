@@ -4,3 +4,9 @@ D:\firga\.mono\temp\obj\Debug\Idle Printer.csprojAssemblyReference.cache
 D:\firga\.mono\temp\obj\Debug\Idle Printer.csproj.CoreCompileInputs.cache
 D:\firga\.mono\temp\obj\Debug\Idle Printer.dll
 D:\firga\.mono\temp\obj\Debug\Idle Printer.pdb
+C:\Users\duckl1ng\Documents\GitHub\firga\.mono\temp\bin\Debug\Idle Printer.dll
+C:\Users\duckl1ng\Documents\GitHub\firga\.mono\temp\bin\Debug\Idle Printer.pdb
+C:\Users\duckl1ng\Documents\GitHub\firga\.mono\temp\obj\Debug\Idle Printer.csprojAssemblyReference.cache
+C:\Users\duckl1ng\Documents\GitHub\firga\.mono\temp\obj\Debug\Idle Printer.csproj.CoreCompileInputs.cache
+C:\Users\duckl1ng\Documents\GitHub\firga\.mono\temp\obj\Debug\Idle Printer.dll
+C:\Users\duckl1ng\Documents\GitHub\firga\.mono\temp\obj\Debug\Idle Printer.pdb
