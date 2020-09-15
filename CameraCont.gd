@@ -5,7 +5,7 @@ extends Camera
 # var a = 2
 # var b = "text"
 
-
+var ite
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -17,22 +17,26 @@ func _ready():
 
 
 func _on_Button_pressed():
-	translate(Vector3(-7.5,0,0))
+	translate(Vector3(-7.978,0,0))
 	pass # Replace with function body.
 
 
 func _on_Button2_pressed():
-	translate(Vector3(7.5,0,0))
+	translate(Vector3(7.978,0,0))
 	pass # Replace with function body.
 
 
 func _on_Button2_gui_input(event):
 	if event is InputEventScreenTouch:
-		translate(Vector3(7.5,0,0))
+		translate(Vector3(7.978,0,0))
 	pass # Replace with function body.
 
 
 func _on_Button_gui_input(event):
 	if event is InputEventScreenTouch:
 		translate(Vector3(-7.5,0,0))
+	pass # Replace with function body.
+
+
+func _on_ItemList_item_selected(index):
 	pass # Replace with function body.
