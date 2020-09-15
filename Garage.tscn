@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://CameraCont.gd" type="Script" id=1]
 [ext_resource path="res://AddPlate.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Garage.cs" type="Script" id=3]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -26,7 +25,6 @@ albedo_color = Color( 0.760784, 0.560784, 0.282353, 1 )
 albedo_color = Color( 0.768627, 0.411765, 0.0627451, 1 )
 
 [node name="Spatial" type="Spatial"]
-script = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.0167418, 3.89401, 1.71176 )
@@ -299,5 +297,9 @@ light_bake_mode = 2
 shadow_enabled = true
 shadow_bias = 0.05
 omni_range = 7.1
+[connection signal="button_down" from="Camera/Control/Button" to="Camera" method="_on_Button_button_down"]
+[connection signal="gui_input" from="Camera/Control/Button" to="Camera" method="_on_Button_gui_input"]
 [connection signal="pressed" from="Camera/Control/Button" to="Camera" method="_on_Button_pressed"]
+[connection signal="button_down" from="Camera/Control/Button2" to="Camera" method="_on_Button2_button_down"]
+[connection signal="gui_input" from="Camera/Control/Button2" to="Camera" method="_on_Button2_gui_input"]
 [connection signal="pressed" from="Camera/Control/Button2" to="Camera" method="_on_Button2_pressed"]
