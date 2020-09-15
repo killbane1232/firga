@@ -1,6 +1,0 @@
-D:\Idle Print\.mono\temp\bin\Debug\Idle Printer.dll
-D:\Idle Print\.mono\temp\bin\Debug\Idle Printer.pdb
-D:\Idle Print\.mono\temp\obj\Debug\Idle Printer.csprojAssemblyReference.cache
-D:\Idle Print\.mono\temp\obj\Debug\Idle Printer.csproj.CoreCompileInputs.cache
-D:\Idle Print\.mono\temp\obj\Debug\Idle Printer.dll
-D:\Idle Print\.mono\temp\obj\Debug\Idle Printer.pdb
