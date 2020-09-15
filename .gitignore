@@ -1,2 +1,5 @@
 
 *.gradle
+android/build/gradle.properties
+android/build/config.gradle
+android/build/build.gradle
