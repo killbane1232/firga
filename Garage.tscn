@@ -25,6 +25,9 @@ albedo_color = Color( 0.760784, 0.560784, 0.282353, 1 )
 albedo_color = Color( 0.768627, 0.411765, 0.0627451, 1 )
 
 [node name="Spatial" type="Spatial"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.0167418, 3.89401, 1.71176 )
@@ -35,17 +38,24 @@ script = ExtResource( 1 )
 [node name="Control" type="Control" parent="Camera"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_bottom = 10.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="Camera/Control"]
-margin_left = 2.82843
-margin_top = 263.044
-margin_right = 92.8284
-margin_bottom = 308.044
+anchor_left = 0.003
+anchor_top = 0.431
+anchor_right = 0.091
+anchor_bottom = 0.505
+margin_left = -0.24357
+margin_top = 0.133728
+margin_right = -0.355576
+margin_bottom = -0.0062561
 hint_tooltip = "left"
+size_flags_horizontal = 0
+size_flags_vertical = 0
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -56,10 +66,14 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="Camera/Control"]
-margin_left = 933.381
-margin_top = 254.558
-margin_right = 1023.38
-margin_bottom = 299.558
+anchor_left = 0.912
+anchor_top = 0.417
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -0.506958
+margin_top = 0.188431
+margin_right = -0.618896
+margin_bottom = -5.44156
 hint_tooltip = "left"
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
