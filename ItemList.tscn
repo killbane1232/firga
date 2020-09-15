@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ItemList.gd" type="Script" id=1]
+
+[node name="ItemList" type="ItemList"]
+visible = false
+anchor_left = 0.155
+anchor_top = 0.151
+anchor_right = 0.845
+anchor_bottom = 0.849
+margin_left = 0.279999
+margin_top = -0.110008
+margin_right = -0.280029
+margin_bottom = 0.109985
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
