@@ -44,7 +44,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Camera/Control"]
+[node name="LeftButton" type="Button" parent="Camera/Control"]
 anchor_left = 0.003
 anchor_top = 0.431
 anchor_right = 0.091
@@ -65,7 +65,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="Camera/Control"]
+[node name="RightButton" type="Button" parent="Camera/Control"]
 anchor_left = 0.913245
 anchor_top = 0.42023
 anchor_right = 1.00114
@@ -368,9 +368,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341485, 1.76631, -2.05009 )
 
 [node name="Spatial3" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341485, 1.76631, -2.05009 )
-[connection signal="button_down" from="Camera/Control/Button" to="Camera" method="_on_Button_button_down"]
-[connection signal="gui_input" from="Camera/Control/Button" to="Camera" method="_on_Button_gui_input"]
-[connection signal="pressed" from="Camera/Control/Button" to="Camera" method="_on_Button_pressed"]
-[connection signal="button_down" from="Camera/Control/Button2" to="Camera" method="_on_Button2_button_down"]
-[connection signal="gui_input" from="Camera/Control/Button2" to="Camera" method="_on_Button2_gui_input"]
-[connection signal="pressed" from="Camera/Control/Button2" to="Camera" method="_on_Button2_pressed"]
+[connection signal="button_down" from="Camera/Control/LeftButton" to="Camera" method="_on_Button_button_down"]
+[connection signal="gui_input" from="Camera/Control/LeftButton" to="Camera" method="_on_Button_gui_input"]
+[connection signal="pressed" from="Camera/Control/LeftButton" to="Camera" method="_on_Button_pressed"]
+[connection signal="button_down" from="Camera/Control/RightButton" to="Camera" method="_on_Button2_button_down"]
+[connection signal="gui_input" from="Camera/Control/RightButton" to="Camera" method="_on_Button2_gui_input"]
+[connection signal="pressed" from="Camera/Control/RightButton" to="Camera" method="_on_Button2_pressed"]
+[connection signal="gui_input" from="Camera/Control/Menu" to="Camera" method="_on_Menu_gui_input"]
+[connection signal="pressed" from="Camera/Control/Menu" to="Camera" method="_on_Menu_pressed"]
+[connection signal="gui_input" from="Camera/Control/ExitMenu" to="Camera" method="_on_ExitMenu_gui_input"]
+[connection signal="pressed" from="Camera/Control/ExitMenu" to="Camera" method="_on_ExitMenu_pressed"]
+[connection signal="gui_input" from="Camera/Control/ExitGame" to="Camera" method="_on_ExitGame_gui_input"]
+[connection signal="pressed" from="Camera/Control/ExitGame" to="Camera" method="_on_ExitGame_pressed"]
+[connection signal="gui_input" from="Camera/Control/Options" to="Camera" method="_on_Options_gui_input"]
+[connection signal="pressed" from="Camera/Control/Options" to="Camera" method="_on_Options_pressed"]
+[connection signal="gui_input" from="Camera/Control/ChooseRoom" to="Camera" method="_on_ChooseRoom_gui_input"]
+[connection signal="pressed" from="Camera/Control/ChooseRoom" to="Camera" method="_on_ChooseRoom_pressed"]
