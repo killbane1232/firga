@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"res://Garage.cs":{"modified_time":"1600175549","class":{"namespace":"","class_name":"Garage","nested":false}}}
-=======
-{"res://Garage.cs":{"modified_time":"1600199543","class":{"namespace":"","class_name":"Garage","nested":false}}}
->>>>>>> d4a7d27149851c615e04b34e7699890605522e87
+{"res://scripts/Garage.cs":{"modified_time":"1600259585","class":{"namespace":"","class_name":"Garage","nested":false}}}

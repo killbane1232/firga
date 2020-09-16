@@ -26,6 +26,11 @@ IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 
+[display]
+
+window/per_pixel_transparency/allowed=true
+window/per_pixel_transparency/enabled=true
+
 [editor_plugins]
 
 enabled=PoolStringArray(  )
@@ -41,7 +46,12 @@ vram_compression/import_etc=true
 vram_compression/import_etc2=false
 quality/shadows/filter_mode=2
 quality/shadows/filter_mode.mobile=1
+quality/reflections/texture_array_reflections.mobile=true
+quality/reflections/high_quality_ggx.mobile=true
 quality/shading/force_vertex_shading=true
 quality/shading/force_lambert_over_burley=true
 quality/shading/force_blinn_over_ggx=true
+quality/filters/use_nearest_mipmap_filter=true
+quality/filters/msaa=4
+quality/depth/hdr.mobile=true
 environment/default_environment="res://default_env.tres"

@@ -31,10 +31,7 @@ __meta__ = {
 }
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.016742, 4.44313, 3.15614 )
-fov = 50.0
-near = 1.55
-far = 9.0
+transform = Transform( 0.927184, 0.128123, -0.352015, 0, 0.939693, 0.34202, 0.374607, -0.317116, 0.871268, -1.86074, 3.28965, 1.07763 )
 script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="Camera"]
@@ -241,6 +238,7 @@ shape = SubResource( 3 )
 
 [node name="Light Bulb" type="OmniLight" parent="Room"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07325, -2.78338 )
+visible = false
 light_energy = 0.65
 light_indirect_energy = 3.58
 light_specular = 0.24
@@ -356,6 +354,7 @@ shape = SubResource( 3 )
 
 [node name="Light Bulb" type="OmniLight" parent="Room2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07325, -2.78338 )
+visible = false
 light_energy = 0.65
 light_indirect_energy = 3.58
 light_specular = 0.24
