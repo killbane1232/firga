@@ -49,6 +49,13 @@ func _on_ItemList2_item_selected(index):
 		var end = get_parent()
 		print(name)
 		end.add_child(ass)
+	if index == 2:
+		var printer = load("res://models/Printer1.tscn")
+		var ass = printer.instance()
+		ass.visible=true
+		var end = get_parent()
+		print(name)
+		end.add_child(ass)
 	ite.unselect(index)
 	ite.visible=false
 	pass # Replace with function body.
