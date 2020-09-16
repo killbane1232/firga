@@ -35,6 +35,7 @@ margin_left = 0.279999
 margin_top = -0.110008
 margin_right = -0.280029
 margin_bottom = 0.109985
+max_columns = 5
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false

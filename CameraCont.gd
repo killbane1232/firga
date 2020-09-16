@@ -36,7 +36,3 @@ func _on_Button_gui_input(event):
 	if event is InputEventScreenTouch:
 		translate(Vector3(-7.5,0,0))
 	pass # Replace with function body.
-
-
-func _on_ItemList_item_selected(index):
-	pass # Replace with function body.
