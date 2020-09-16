@@ -36,7 +36,7 @@ func _on_Button_gui_input(event):
 	if event is InputEventScreenTouch:
 		translate(Vector3(-7.5,0,0))
 	pass # Replace with function body.
-<<<<<<< HEAD:CameraCont.gd
+#<<<<<<< HEAD:CameraCont.gd
 
 
 func _on_ItemList_item_selected(index):
@@ -135,5 +135,5 @@ func _on_ChooseRoom_gui_input(event):
 	if event is InputEventScreenTouch:
 		print('Choosing room')
 	pass # Replace with function body.
-=======
->>>>>>> d4a7d27149851c615e04b34e7699890605522e87:scripts/CameraCont.gd
+#=======
+#>>>>>>> d4a7d27149851c615e04b34e7699890605522e87:scripts/CameraCont.gd
