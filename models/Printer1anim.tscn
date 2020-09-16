@@ -60,7 +60,7 @@ mesh = ExtResource( 4 )
 material/0 = ExtResource( 1 )
 
 [node name="printer1table" type="MeshInstance" parent="StaticBody/printer1all"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.326304 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0336196 )
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 1 )
 
@@ -70,7 +70,7 @@ mesh = ExtResource( 5 )
 material/0 = ExtResource( 1 )
 
 [node name="printer1extruder" type="MeshInstance" parent="StaticBody/printer1all/printer1slider"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.150907, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.432852, 0, 0 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 1 )
 
