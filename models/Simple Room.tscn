@@ -37,6 +37,7 @@ light_color = Color( 0.901961, 0.92549, 0.721569, 1 )
 light_energy = 1.5
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.662603, 0.613372, -0.429804, -0.0839771, 0.631084, 0.771155, 0.744248, -0.474877, 0.469668, 0, 5.44682, 1.29823 )
-light_color = Color( 0.937255, 0.94902, 0.835294, 1 )
-light_energy = 0.2
+transform = Transform( 0.830635, 0.0951577, -0.548626, 0.146353, 0.913336, 0.379998, 0.53724, -0.395933, 0.744722, -3.1415, 4.68303, 4.92398 )
+light_color = Color( 0.996875, 1, 0.90625, 1 )
+light_energy = 0.3
+shadow_enabled = true
