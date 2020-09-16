@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/CameraCont.gd" type="Script" id=1]
 [ext_resource path="res://models/AddPlate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/Simple Room.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -138,7 +139,8 @@ __meta__ = {
 }
 
 [node name="Room" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03701, 2.2504 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03701, -12.8361 )
+visible = false
 
 [node name="Printers" type="Spatial" parent="Room"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289005, 0, -4.29144 )
@@ -247,7 +249,8 @@ shadow_bias = 0.05
 omni_range = 7.1
 
 [node name="Room2" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97844, 2.03701, 2.2504 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97844, 2.03701, -12.8361 )
+visible = false
 
 [node name="Printers" type="Spatial" parent="Room2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289005, 0, -4.29144 )
@@ -361,13 +364,19 @@ shadow_bias = 0.05
 omni_range = 7.1
 
 [node name="Spatial" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31942, 1.76631, -2.05009 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31942, 1.76631, -17.1365 )
+visible = false
 
 [node name="Spatial2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341485, 1.76631, -2.05009 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341485, 1.76631, -17.1365 )
+visible = false
 
 [node name="Spatial3" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341485, 1.76631, -2.05009 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341485, 1.76631, -17.1365 )
+visible = false
+
+[node name="Simple Room" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.987857, 0, 0.155366, 0, 1, 0, -0.155366, 0, 0.987857, -1.44941, -0.20896, 2.09057 )
 [connection signal="button_down" from="Camera/Control/LeftButton" to="Camera" method="_on_Button_button_down"]
 [connection signal="gui_input" from="Camera/Control/LeftButton" to="Camera" method="_on_Button_gui_input"]
 [connection signal="pressed" from="Camera/Control/LeftButton" to="Camera" method="_on_Button_pressed"]
