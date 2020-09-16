@@ -1,7 +1,9 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://CameraCont.gd" type="Script" id=1]
-[ext_resource path="res://AddPlate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/CameraCont.gd" type="Script" id=1]
+[ext_resource path="res://models/AddPlate.tscn" type="PackedScene" id=2]
+
+
 
 [sub_resource type="CubeMesh" id=8]
 
