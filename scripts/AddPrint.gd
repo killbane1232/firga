@@ -36,14 +36,14 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 func _on_ItemList2_item_selected(index):
 	print(index)
 	if index == 0:
-		var printer = load("res://Spatial.tscn")
+		var printer = load("res://models/Spatial.tscn")
 		var ass = printer.instance()
 		ass.visible=true
 		var end = get_parent()
 		print(name)
 		end.add_child(ass)
 	if index == 1:
-		var printer = load("res://Print1.tscn")
+		var printer = load("res://models/Print1.tscn")
 		var ass = printer.instance()
 		ass.visible=true
 		var end = get_parent()
