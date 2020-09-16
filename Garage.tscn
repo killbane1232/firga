@@ -31,7 +31,8 @@ __meta__ = {
 }
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.0167418, 3.89401, 1.71176 )
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.016742, 4.44313, 3.15614 )
+fov = 50.0
 near = 1.55
 far = 9.0
 script = ExtResource( 1 )
@@ -376,7 +377,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341485, 1.76631, -17.1365 )
 visible = false
 
 [node name="Simple Room" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.987857, 0, 0.155366, 0, 1, 0, -0.155366, 0, 0.987857, -1.44941, -0.20896, 2.09057 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37039, -0.20896, 2.09057 )
 [connection signal="button_down" from="Camera/Control/LeftButton" to="Camera" method="_on_Button_button_down"]
 [connection signal="gui_input" from="Camera/Control/LeftButton" to="Camera" method="_on_Button_gui_input"]
 [connection signal="pressed" from="Camera/Control/LeftButton" to="Camera" method="_on_Button_pressed"]

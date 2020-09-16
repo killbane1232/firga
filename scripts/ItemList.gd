@@ -8,9 +8,9 @@ extends ItemList
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_item("fuck")
-	add_item("fuck")
-	add_item("fuck")
+	add_item("Girl")
+	add_item("Cube")
+	add_item("Printer")
 	pass # Replace with function body.
 
 
