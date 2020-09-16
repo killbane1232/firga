@@ -44,3 +44,10 @@ android/build/build.gradle
 .mono/temp/obj/ExportDebug/Idle Printer.csprojAssemblyReference.cache
 .mono/temp/obj/ExportDebug/Idle Printer.dll
 .mono/temp/obj/ExportDebug/Idle Printer.pdb
+.mono/metadata/scripts_metadata.editor
+.mono/metadata/scripts_metadata.editor_player
+.mono/temp/bin/Debug/Idle Printer.dll
+.mono/temp/bin/Debug/Idle Printer.pdb
+.mono/temp/obj/Debug/Idle Printer.csproj.CoreCompileInputs.cache
+.mono/temp/obj/Debug/Idle Printer.dll
+.mono/temp/obj/Debug/Idle Printer.pdb
