@@ -17,3 +17,12 @@ android/build/build.gradle
 .mono/temp/obj/Debug/Idle Printer.csprojAssemblyReference.cache
 .mono/temp/obj/Debug/Idle Printer.dll
 .mono/temp/obj/Debug/Idle Printer.pdb
+.mono/assemblies/Debug/api_hash_cache.cfg
+.mono/metadata/scripts_metadata.editor
+.mono/metadata/scripts_metadata.editor_player
+.mono/temp/bin/Debug/Idle Printer.dll
+.mono/temp/bin/Debug/Idle Printer.pdb
+.mono/temp/obj/Debug/Idle Printer.csproj.CoreCompileInputs.cache
+.mono/temp/obj/Debug/Idle Printer.csproj.FileListAbsolute.txt
+.mono/temp/obj/Debug/Idle Printer.dll
+.mono/temp/obj/Debug/Idle Printer.pdb
