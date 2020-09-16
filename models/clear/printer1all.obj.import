@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/printer1all.obj-f2d902284458b86e25c1e9803548bd20.mesh"
+
+[deps]
+
+files=[ "res://.import/printer1all.obj-f2d902284458b86e25c1e9803548bd20.mesh" ]
+
+source_file="res://models/clear/printer1all.obj"
+dest_files=[ "res://.import/printer1all.obj-f2d902284458b86e25c1e9803548bd20.mesh", "res://.import/printer1all.obj-f2d902284458b86e25c1e9803548bd20.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

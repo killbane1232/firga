@@ -50,7 +50,7 @@ func _on_ItemList2_item_selected(index):
 		print(name)
 		end.add_child(ass)
 	if index == 2:
-		var printer = load("res://models/Printer1.tscn")
+		var printer = load("res://models/Printer1anim.tscn")
 		var ass = printer.instance()
 		ass.visible=true
 		var end = get_parent()
