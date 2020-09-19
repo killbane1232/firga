@@ -1,18 +1,17 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scripts/ItemList.gd" type="Script" id=1]
-
+[ext_resource path="res://scripts/ItemListForPrint.gd" type="Script" id=1]
 
 [node name="ItemList" type="ItemList"]
 visible = false
-anchor_left = 0.155
-anchor_top = 0.151
-anchor_right = 0.845
-anchor_bottom = 0.849
-margin_left = 0.279999
-margin_top = -0.110008
-margin_right = -0.280029
-margin_bottom = 0.109985
+margin_left = 149.0
+margin_top = 95.0
+margin_right = 818.0
+margin_bottom = 487.0
+max_columns = 5
+same_column_width = true
+icon_mode = 0
+fixed_icon_size = Vector2( 100, 100 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

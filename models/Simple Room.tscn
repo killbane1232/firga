@@ -41,3 +41,6 @@ transform = Transform( 0.830635, 0.0951577, -0.548626, 0.146353, 0.913336, 0.379
 light_color = Color( 0.996875, 1, 0.90625, 1 )
 light_energy = 0.3
 shadow_enabled = true
+shadow_bias = -0.15
+directional_shadow_bias_split_scale = 0.0
+directional_shadow_depth_range = 1

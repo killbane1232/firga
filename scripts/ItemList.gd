@@ -8,8 +8,6 @@ extends ItemList
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_item("Girl",load("res://buttonimg/girl.tres"))
-	add_item("Cube",load("res://buttonimg/cube.tres"))
 	add_item("Printer",load("res://buttonimg/printer1.tres"))
 	pass # Replace with function body.
 
