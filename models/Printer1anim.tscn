@@ -86,5 +86,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34764, 0 )
 shape = SubResource( 2 )
 
 [node name="ItemList" parent="StaticBody" instance=ExtResource( 7 )]
+
+[node name="Timer" type="Timer" parent="StaticBody"]
 [connection signal="input_event" from="StaticBody" to="StaticBody/printer1all/AnimationPlayer" method="_on_StaticBody_input_event"]
 [connection signal="item_selected" from="StaticBody/ItemList" to="StaticBody/printer1all/AnimationPlayer" method="_on_ItemList_item_selected"]
