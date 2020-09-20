@@ -10,19 +10,20 @@ extends AnimationPlayer
 func _ready():
 	List = get_parent().get_parent().get_child(2)
 	print(List.name)
-	
+	end = get_parent().get_child(2)
 	audio = get_parent().get_parent().get_child(3)
 	state = 0
 	pass # Replace with function body.
 var state
 var mode
+var end
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var now = OS.get_datetime(true)
 	if(state==1):
 		if(time["second"] == now["second"] && time["minute"] == now["minute"]):
 			print("yeee")
-			stop()
+			play("printer2clr")
 			state = 2
 			audio.play()
 			var printer
@@ -32,7 +33,6 @@ func _process(delta):
 				printer = load("res://models/Print1.tscn")
 			ass = printer.instance()
 			ass.visible=true
-			var end = get_parent()
 			print(name)
 			end.add_child(ass)
 	pass
@@ -47,7 +47,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 			if state == 1:
 				print("try to stop me!")
 			if state == 2:
-				get_parent().remove_child(ass)
+				end.remove_child(ass)
 				print("erasing")
 				state = 0
 			print("click")

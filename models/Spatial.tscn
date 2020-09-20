@@ -9,6 +9,6 @@ albedo_texture = ExtResource( 1 )
 [node name="Spatial" type="Spatial"]
 
 [node name="untitled" type="MeshInstance" parent="."]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.997999, -0.546891, -1.06112 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.997999, -0.941, -1.06112 )
 mesh = ExtResource( 2 )
 material/0 = SubResource( 1 )
