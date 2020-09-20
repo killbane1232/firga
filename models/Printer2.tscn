@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://models/clear/printer 2 lay.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://models/clear/printer 2 ray.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/clear/printer 2 full.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/clear/printer 2 extruder.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://scripts/printer2cont.gd" type="Script" id=5]
+[ext_resource path="res://controls/ItemList.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/printers.tres" type="Material" id=7]
+[ext_resource path="res://Sound/Default.wav" type="AudioStream" id=8]
+
+[sub_resource type="Animation" id=2]
+resource_name = "printer2"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("printer 2 ray/printer 2 lay:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 2.89283e-07, 0, -0.887805 ), Vector3( -1.48003e-07, 0, 0.454219 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("printer 2 ray/printer 2 lay/printer 2 extruder:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -1.65291, 0, -5.36442e-07 ), Vector3( -0.257078, 0, -8.9407e-08 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("printer 2 ray:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -1.47997, 0 ) ]
+}
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 2.60421, 2.6906, 2.59674 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0 )
+
+[node name="printer 2 full" type="MeshInstance" parent="StaticBody"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 7 )
+
+[node name="printer 2 ray" type="MeshInstance" parent="StaticBody/printer 2 full"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.47997, 0 )
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 7 )
+
+[node name="printer 2 lay" type="MeshInstance" parent="StaticBody/printer 2 full/printer 2 ray"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86817e-08, 0, 0.118713 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 7 )
+
+[node name="printer 2 extruder" type="MeshInstance" parent="StaticBody/printer 2 full/printer 2 ray/printer 2 lay"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30395, 0, -4.24683e-07 )
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody/printer 2 full"]
+playback_speed = 0.25
+anims/printer2 = SubResource( 2 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.70694, 0 )
+shape = SubResource( 1 )
+
+[node name="ItemList" parent="StaticBody" instance=ExtResource( 6 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody"]
+stream = ExtResource( 8 )
+[connection signal="input_event" from="StaticBody" to="StaticBody/printer 2 full/AnimationPlayer" method="_on_StaticBody_input_event"]
+[connection signal="item_selected" from="StaticBody/ItemList" to="StaticBody/printer 2 full/AnimationPlayer" method="_on_ItemList_item_selected"]

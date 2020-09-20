@@ -9,19 +9,32 @@ extends AnimationPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	List = get_parent().get_parent().get_child(2)
-	Time = List.get_parent().get_child(3)
 	print(List.name)
+	
+	audio = get_parent().get_parent().get_child(3)
 	state = 0
 	pass # Replace with function body.
 var state
+var mode
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var now = OS.get_datetime(true)
-	if(time!=null):
+	if(state==1):
 		if(time["second"] == now["second"] && time["minute"] == now["minute"]):
 			print("yeee")
 			stop()
 			state = 2
+			audio.play()
+			var printer
+			if mode==0:
+				printer = load("res://models/Spatial.tscn")
+			if mode==1:
+				printer = load("res://models/Print1.tscn")
+			ass = printer.instance()
+			ass.visible=true
+			var end = get_parent()
+			print(name)
+			end.add_child(ass)
 	pass
 var List
 var Time
@@ -49,15 +62,10 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 
 var time
 var ass
+var audio
 func _on_ItemList_item_selected(index):
 	print(index)
 	if index == 0:
-		var printer = load("res://models/Spatial.tscn")
-		ass = printer.instance()
-		ass.visible=true
-		var end = get_parent()
-		print(name)
-		end.add_child(ass)
 		time = OS.get_datetime(true)
 		state = 1
 		time["second"]+=30
@@ -72,12 +80,6 @@ func _on_ItemList_item_selected(index):
 		time["day"] += smth 
 		print(time)
 	if index == 1:
-		var printer = load("res://models/Print1.tscn")
-		ass = printer.instance()
-		ass.visible=true
-		var end = get_parent()
-		print(name)
-		end.add_child(ass)
 		time = OS.get_datetime(true)
 		state = 1
 		time["second"]+=15
@@ -90,7 +92,8 @@ func _on_ItemList_item_selected(index):
 		smth = time["hour"]/24
 		time["hour"] = time["hour"]%24
 		time["day"] += smth 
-	play("printer1")
+	play("printer2")
+	mode = index
 	print(current_animation)
 	List.unselect(index)
 	List.visible=false
