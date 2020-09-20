@@ -1,6 +1,7 @@
 [gd_resource type="ProxyTexture" load_steps=2 format=2]
 
-[ext_resource path="res://buttonimg/Снимок.PNG" type="Texture" id=1]
+[ext_resource path="res://buttonimg/printer2.PNG" type="Texture" id=1]
+
 
 [resource]
 flags = 4

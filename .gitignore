@@ -57,3 +57,5 @@ android/build/build.gradle
 .mono/temp/obj/Debug/Idle Printer.csprojAssemblyReference.cache
 .mono/temp/obj/Debug/Idle Printer.dll
 .mono/temp/obj/Debug/Idle Printer.pdb
+export_presets.cfg
+project.godot

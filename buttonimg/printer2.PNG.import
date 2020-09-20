@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Снимок.PNG-3e2a4542145ded5a45f1cb91c4f8cbf5.stex"
+path="res://.import/printer2.PNG-6218309a77807ec247260e1fb0074a4c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://buttonimg/Снимок.PNG"
-dest_files=[ "res://.import/Снимок.PNG-3e2a4542145ded5a45f1cb91c4f8cbf5.stex" ]
+source_file="res://buttonimg/printer2.PNG"
+dest_files=[ "res://.import/printer2.PNG-6218309a77807ec247260e1fb0074a4c.stex" ]
 
 [params]
 
