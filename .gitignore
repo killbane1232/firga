@@ -59,3 +59,4 @@ android/build/build.gradle
 .mono/temp/obj/Debug/Idle Printer.pdb
 export_presets.cfg
 project.godot
+export_presets.cfg
