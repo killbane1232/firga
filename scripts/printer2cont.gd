@@ -57,7 +57,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 				print("try to stop me!")
 			if state == 2:
 				print("were1")
-				print(emit_signal("moneycng", 20*(mode+1)))
+				print(emit_signal("moneycng", 20*(2-mode)))
 				end.remove_child(ass)
 				print("erasing")
 				state = 0
