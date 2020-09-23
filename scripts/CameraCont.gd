@@ -15,28 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Button_pressed():
-	translate(Vector3(-7.978,0,0))
-	pass # Replace with function body.
-
-
-func _on_Button2_pressed():
-	translate(Vector3(7.978,0,0))
-	pass # Replace with function body.
-
-
-func _on_Button2_gui_input(event):
-	if event is InputEventScreenTouch:
-		translate(Vector3(7.978,0,0))
-	pass # Replace with function body.
-
-
-func _on_Button_gui_input(event):
-	if event is InputEventScreenTouch:
-		translate(Vector3(-7.5,0,0))
-	pass # Replace with function body.
-
 func _on_ItemList_item_selected(index):
 	pass # Replace with function body.
 
@@ -45,8 +23,6 @@ func _on_Menu_pressed():
 	print('Menu is open')
 	
 	get_node("Control/Menu").visible = false
-	get_node("Control/LeftButton").visible = false
-	get_node("Control/RightButton").visible = false
 	
 	get_node("Control/ChooseRoom").visible = true
 	get_node("Control/ExitGame").visible = true
@@ -61,8 +37,6 @@ func _on_Menu_gui_input(event):
 		print('Menu is open')
 		
 		get_node("Control/Menu").visible = false
-		get_node("Control/LeftButton").visible = false
-		get_node("Control/RightButton").visible = false
 	
 		get_node("Control/ChooseRoom").visible = true
 		get_node("Control/ExitGame").visible = true
@@ -75,8 +49,6 @@ func _on_ExitMenu_pressed():
 	print('Menu is closed')
 	
 	get_node("Control/Menu").visible = true
-	get_node("Control/LeftButton").visible = true
-	get_node("Control/RightButton").visible = true
 	
 	get_node("Control/ChooseRoom").visible = false
 	get_node("Control/ExitGame").visible = false
@@ -90,8 +62,6 @@ func _on_ExitMenu_gui_input(event):
 		print('Menu is closed')
 		
 		get_node("Control/Menu").visible = true
-		get_node("Control/LeftButton").visible = true
-		get_node("Control/RightButton").visible = true
 	
 		get_node("Control/ChooseRoom").visible = false
 		get_node("Control/ExitGame").visible = false
