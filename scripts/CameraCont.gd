@@ -4,10 +4,12 @@ extends Camera
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var money = 0
 var ite
+var txt
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	txt = get_child(0).get_child(5)
 	pass # Replace with function body.
 
 
@@ -17,7 +19,13 @@ func _ready():
 
 func _on_ItemList_item_selected(index):
 	pass # Replace with function body.
-
+	
+func _on_moneycng(var a):
+	print("were")
+	money += a
+	txt.text = "Money: "+ String(money)
+	pass # Replace with function body.
+	
 
 func _on_Menu_pressed():
 	print('Menu is open')

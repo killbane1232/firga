@@ -26,10 +26,10 @@ __meta__ = {
 [node name="Menu" type="Button" parent="Camera/Control"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -173.796
-margin_top = 29.184
-margin_right = -34.7963
-margin_bottom = 114.184
+margin_left = -186.0
+margin_top = 29.0
+margin_right = -35.0
+margin_bottom = 107.0
 text = "Menu"
 __meta__ = {
 "_edit_use_anchors_": false

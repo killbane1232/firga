@@ -13,7 +13,8 @@ var time
 var ass
 var audio
 var cont
-
+var cam
+signal moneycng
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	cont = get_parent().get_parent().get_child(2)
@@ -21,6 +22,9 @@ func _ready():
 	print(List.name)
 	audio = get_parent().get_parent().get_child(3)
 	state = 0
+	cam = get_node("/root/Spatial/Camera")
+	connect("moneycng",cam,"_on_moneycng")
+	print(cam.name)
 	end = get_parent().get_child(1).get_child(0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -52,6 +56,8 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 			if state == 1:
 				print("try to stop me!")
 			if state == 2:
+				print("were1")
+				print(emit_signal("moneycng", 15))
 				end.remove_child(ass)
 				print("erasing")
 				state = 0
