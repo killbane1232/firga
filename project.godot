@@ -47,13 +47,17 @@ singletons=[  ]
 
 quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=3
+threads/thread_model=2
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 quality/shadows/filter_mode=2
 quality/shadows/filter_mode.mobile=1
 quality/shading/force_vertex_shading=true
+quality/shading/force_vertex_shading.mobile=false
 quality/shading/force_lambert_over_burley=true
+quality/shading/force_lambert_over_burley.mobile=false
 quality/shading/force_blinn_over_ggx=true
+quality/shading/force_blinn_over_ggx.mobile=false
 quality/filters/use_nearest_mipmap_filter=true
 quality/filters/msaa=1
 environment/default_environment="res://default_env.tres"

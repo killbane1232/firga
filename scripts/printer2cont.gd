@@ -5,18 +5,24 @@ extends AnimationPlayer
 # var a = 2
 # var b = "text"
 
+var state
+var mode
+var end
+var time
+var ass
+var audio
+var List
+var cont
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	List = get_parent().get_parent().get_child(2)
+	cont = get_parent().get_parent().get_child(2)
+	List = cont.get_child(0)
 	print(List.name)
 	end = get_parent().get_child(2)
 	audio = get_parent().get_parent().get_child(3)
 	state = 0
 	pass # Replace with function body.
-var state
-var mode
-var end
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var now = OS.get_datetime(true)
@@ -36,13 +42,12 @@ func _process(delta):
 			print(name)
 			end.add_child(ass)
 	pass
-var List
-var Time
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):
 	if event is InputEventScreenTouch || event is InputEventMouseButton:
 		if event.is_pressed():
 			if state == 0:
-				List.visible=true
+				cont.visible=true
+				#List.visible=true
 				print(List.name)
 			if state == 1:
 				print("try to stop me!")
@@ -60,9 +65,6 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 			print("nope") 
 	pass # Replace with function body.
 
-var time
-var ass
-var audio
 func _on_ItemList_item_selected(index):
 	print(index)
 	if index == 0:
@@ -96,5 +98,13 @@ func _on_ItemList_item_selected(index):
 	mode = index
 	print(current_animation)
 	List.unselect(index)
-	List.visible=false
+	#List.visible=false
+	cont.visible=false
+	pass # Replace with function body.
+
+func _on_Control_gui_input(event):
+	if event is InputEventScreenTouch || event is InputEventMouseButton:
+		if event.is_pressed():
+			#List.visible=false
+			cont.visible=false
 	pass # Replace with function body.

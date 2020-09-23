@@ -5,13 +5,13 @@ extends MeshInstance
 # var a = 2
 # var b = "text"
 var ite
-
+var cont
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("FUCK")
 	print(name)
-	ite = get_child(1)
-			
+	cont = get_child(1)
+	ite = cont.get_child(0)	
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,7 +20,8 @@ func _ready():
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):
 	if event is InputEventScreenTouch || event is InputEventMouseButton:
 		if event.is_pressed():
-			ite.visible=true
+			#ite.visible=true
+			cont.visible=true
 			print(ite.name)
 			print("click")
 			#var printer = load("res://Spatial.tscn")
@@ -57,5 +58,15 @@ func _on_ItemList_item_selected(index):
 		print(name)
 		end.add_child(ass)
 	ite.unselect(index)
-	ite.visible=false
+	#ite.visible=false
+	cont.visible=false
+	pass # Replace with function body.
+
+
+func _on_Control_gui_input(event):
+	if event is InputEventScreenTouch || event is InputEventMouseButton:
+		if event.is_pressed():
+			#ite.visible=false
+			cont.visible=false
+			
 	pass # Replace with function body.

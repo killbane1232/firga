@@ -5,7 +5,7 @@
 [ext_resource path="res://models/clear/printer 2 full.obj" type="ArrayMesh" id=3]
 [ext_resource path="res://models/clear/printer 2 extruder.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://scripts/printer2cont.gd" type="Script" id=5]
-[ext_resource path="res://controls/ItemList.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/ItemListForPrint.gd" type="Script" id=6]
 [ext_resource path="res://models/printers.tres" type="Material" id=7]
 [ext_resource path="res://Sound/Default.wav" type="AudioStream" id=8]
 
@@ -49,7 +49,7 @@ tracks/2/keys = {
 "values": [ Vector3( 0, -1.47997, 0 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "printer2clr"
 tracks/0/type = "value"
 tracks/0/path = NodePath("printer 2 ray/printer 2 lay:translation")
@@ -76,7 +76,7 @@ tracks/1/keys = {
 "values": [ Vector3( 0, 0.705435, 0 ) ]
 }
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=3]
 extents = Vector3( 2.60421, 2.6906, 2.59674 )
 
 [node name="Spatial" type="Spatial"]
@@ -106,7 +106,7 @@ material/0 = ExtResource( 7 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody/printer 2 full"]
 playback_speed = 0.25
 anims/printer2 = SubResource( 1 )
-anims/printer2clr = SubResource( 3 )
+anims/printer2clr = SubResource( 2 )
 script = ExtResource( 5 )
 
 [node name="Spatial" type="Spatial" parent="StaticBody/printer 2 full"]
@@ -114,11 +114,36 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.13154, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.70694, 0 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
-[node name="ItemList" parent="StaticBody" instance=ExtResource( 6 )]
+[node name="Control" type="Control" parent="StaticBody"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="StaticBody/Control"]
+anchor_left = 0.173
+anchor_top = 0.173
+anchor_right = 0.827
+anchor_bottom = 0.827
+margin_left = 0.347992
+margin_top = 0.199997
+margin_right = -0.348022
+margin_bottom = -0.200012
+max_columns = 5
+same_column_width = true
+icon_mode = 0
+fixed_icon_size = Vector2( 100, 100 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody"]
 stream = ExtResource( 8 )
 [connection signal="input_event" from="StaticBody" to="StaticBody/printer 2 full/AnimationPlayer" method="_on_StaticBody_input_event"]
-[connection signal="item_selected" from="StaticBody/ItemList" to="StaticBody/printer 2 full/AnimationPlayer" method="_on_ItemList_item_selected"]
+[connection signal="gui_input" from="StaticBody/Control" to="StaticBody/printer 2 full/AnimationPlayer" method="_on_Control_gui_input"]
+[connection signal="item_selected" from="StaticBody/Control/ItemList" to="StaticBody/printer 2 full/AnimationPlayer" method="_on_ItemList_item_selected"]
