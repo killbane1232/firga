@@ -82,13 +82,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Label" type="Label" parent="Camera/Control"]
-anchor_left = 0.0635769
-anchor_top = 0.0410884
-anchor_right = 0.213968
-anchor_bottom = 0.0993247
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control"]
+anchor_left = 0.0498047
+anchor_top = 0.0415973
+anchor_right = 0.224609
+anchor_bottom = 0.103161
 text = "Money:"
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": true
 }
