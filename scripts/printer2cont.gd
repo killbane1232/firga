@@ -57,7 +57,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 				print("try to stop me!")
 			if state == 2:
 				print("were1")
-				print(emit_signal("moneycng", 15))
+				print(emit_signal("moneycng", 20*(mode+1)))
 				end.remove_child(ass)
 				print("erasing")
 				state = 0
@@ -76,7 +76,7 @@ func _on_ItemList_item_selected(index):
 	if index == 0:
 		time = OS.get_datetime(true)
 		state = 1
-		time["second"]+=30
+		time["second"]+=20
 		var smth = time["second"]/60
 		time["second"] = time["second"]%60
 		time["minute"] += smth 
@@ -90,7 +90,7 @@ func _on_ItemList_item_selected(index):
 	if index == 1:
 		time = OS.get_datetime(true)
 		state = 1
-		time["second"]+=15
+		time["second"]+=10
 		var smth = time["second"]/60
 		time["second"] = time["second"]%60
 		time["minute"] += smth 
@@ -100,6 +100,9 @@ func _on_ItemList_item_selected(index):
 		smth = time["hour"]/24
 		time["hour"] = time["hour"]%24
 		time["day"] += smth 
+	if index == 2:
+		print(emit_signal("moneycng", 10))
+		get_parent().get_parent().get_parent().queue_free()
 	play("printer2")
 	mode = index
 	print(current_animation)

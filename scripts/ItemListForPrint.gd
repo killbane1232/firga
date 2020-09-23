@@ -10,6 +10,7 @@ extends ItemList
 func _ready():
 	add_item("Girl",load("res://buttonimg/girl.tres"))
 	add_item("Cube",load("res://buttonimg/cube.tres"))
+	add_item("Erase",load("res://buttonimg/cross.tres"))
 	pass # Replace with function body.
 
 
