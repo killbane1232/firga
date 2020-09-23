@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/ItemListForPrint.gd" type="Script" id=1]
+[ext_resource path="res://ButtonThemes/disable.tres" type="StyleBox" id=2]
+[ext_resource path="res://ButtonThemes/normal.tres" type="StyleBox" id=3]
+[ext_resource path="res://ButtonThemes/hover.tres" type="StyleBox" id=4]
+[ext_resource path="res://ButtonThemes/pressed.tres" type="StyleBox" id=5]
 
 [node name="ItemList" type="ItemList"]
 visible = false
@@ -8,6 +12,11 @@ margin_left = 149.0
 margin_top = 95.0
 margin_right = 818.0
 margin_bottom = 487.0
+custom_styles/cursor = ExtResource( 4 )
+custom_styles/selected_focus = ExtResource( 3 )
+custom_styles/selected = ExtResource( 5 )
+custom_styles/bg = ExtResource( 2 )
+custom_constants/icon_margin = 2
 max_columns = 5
 same_column_width = true
 icon_mode = 0

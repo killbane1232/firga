@@ -19,6 +19,7 @@ config/name="Idle Printer"
 run/main_scene="res://Garage.tscn"
 boot_splash/image="res://bootsplash.png"
 config/icon="res://models/clear/printer 1.png"
+config/low_processor_mode=false
 
 [autoload]
 
