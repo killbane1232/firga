@@ -5,7 +5,7 @@
 [ext_resource path="res://models/clear/printer 2 full.obj" type="ArrayMesh" id=3]
 [ext_resource path="res://models/clear/printer 2 extruder.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://scripts/printer2cont.gd" type="Script" id=5]
-[ext_resource path="res://scripts/ItemListForPrint.gd" type="Script" id=6]
+[ext_resource path="res://controls/ItemList.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/printers.tres" type="Material" id=7]
 [ext_resource path="res://Sound/Default.wav" type="AudioStream" id=8]
 
@@ -124,23 +124,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ItemList" type="ItemList" parent="StaticBody/Control"]
-anchor_left = 0.173
-anchor_top = 0.173
-anchor_right = 0.827
-anchor_bottom = 0.827
-margin_left = 0.347992
-margin_top = 0.199997
-margin_right = -0.348022
-margin_bottom = -0.200012
-max_columns = 5
-same_column_width = true
-icon_mode = 0
-fixed_icon_size = Vector2( 100, 100 )
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="ItemList" parent="StaticBody/Control" instance=ExtResource( 6 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody"]
 stream = ExtResource( 8 )

@@ -53,7 +53,6 @@ margin_right = -242.28
 margin_bottom = -121.24
 custom_fonts/font = SubResource( 4 )
 max_text_lines = 2
-max_columns = 5
 script = ExtResource( 2 )
 [connection signal="input_event" from="PrinterAddPlate/StaticBody" to="PrinterAddPlate" method="_on_StaticBody_input_event"]
 [connection signal="gui_input" from="PrinterAddPlate/Control" to="PrinterAddPlate" method="_on_Control_gui_input"]
