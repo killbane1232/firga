@@ -22,7 +22,7 @@ __meta__ = {
 }
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.927184, 0.128123, -0.352015, 0, 0.939693, 0.34202, 0.374607, -0.317116, 0.871268, -1.86074, 3.28965, 1.07763 )
+transform = Transform( 0.916454, 0.169107, -0.362651, 0, 0.906308, 0.422618, 0.400141, -0.38731, 0.830589, -1.53841, 3.2942, 0.735047 )
 script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="Camera"]

@@ -7,11 +7,10 @@
 [ext_resource path="res://ButtonThemes/pressed.tres" type="StyleBox" id=5]
 
 [node name="ItemList" type="ItemList"]
-visible = false
-margin_left = 149.0
-margin_top = 95.0
-margin_right = 818.0
-margin_bottom = 487.0
+margin_left = 465.0
+margin_top = 235.0
+margin_right = 815.0
+margin_bottom = 485.0
 custom_styles/cursor = ExtResource( 4 )
 custom_styles/selected_focus = ExtResource( 3 )
 custom_styles/selected = ExtResource( 5 )
@@ -20,7 +19,7 @@ custom_constants/icon_margin = 2
 max_columns = 5
 same_column_width = true
 icon_mode = 0
-fixed_icon_size = Vector2( 100, 100 )
+fixed_icon_size = Vector2( 155, 155 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
