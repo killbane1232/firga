@@ -6,6 +6,7 @@
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 2 )
+roughness = 0.75
 
 [node name="Simple Room" type="Spatial"]
 
@@ -27,12 +28,15 @@ transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 4.55573
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 3.1374, 3.63478, -4.66263 )
 light_color = Color( 0.901961, 0.92549, 0.721569, 1 )
 light_energy = 1.5
+shadow_enabled = true
+shadow_bias = -0.2
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.830635, 0.0951579, -0.548626, 0.146353, 0.913336, 0.379998, 0.53724, -0.395933, 0.744722, -3.1415, 4.68303, 4.92398 )
+transform = Transform( 0.830635, 0.095158, -0.548626, 0.146353, 0.913336, 0.379998, 0.53724, -0.395933, 0.744722, -3.1415, 4.68303, 4.92398 )
+layers = 2147483649
 light_color = Color( 0.996875, 1, 0.90625, 1 )
 light_energy = 0.3
 shadow_enabled = true
-shadow_bias = -0.15
+shadow_bias = -0.2
 directional_shadow_bias_split_scale = 0.0
 directional_shadow_depth_range = 1
