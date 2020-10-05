@@ -1,6 +1,5 @@
 extends Camera
 
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -12,6 +11,13 @@ func _ready():
 	txt = get_child(0).get_child(5)
 	pass # Replace with function body.
 
+onready var cam = get_node(".")
+onready var cam_coord = cam.translation
+
+func _input(event):
+	if event is InputEventScreenDrag || event is InputEventMouse:
+		#print(event.relative)
+		cam.translate(Vector3(event.relative.x * -0.001, 0, 0))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

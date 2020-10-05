@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SimpleRoom.obj-e6c51729986ba9a310f2645844606172.mesh"
+
+[deps]
+
+files=[ "res://.import/SimpleRoom.obj-e6c51729986ba9a310f2645844606172.mesh" ]
+
+source_file="res://models/updated/SimpleRoom.obj"
+dest_files=[ "res://.import/SimpleRoom.obj-e6c51729986ba9a310f2645844606172.mesh", "res://.import/SimpleRoom.obj-e6c51729986ba9a310f2645844606172.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

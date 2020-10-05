@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://models/updated/SimpleRoom.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://models/updated/SimpleRoom.png" type="Texture" id=2]
+[ext_resource path="res://models/AddPlate.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="SimpleRoom" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 3.44095, 4.31453, -5.16082 )
+spot_range = 10.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.868207, 0.163438, -0.468513, 0.133772, 0.832144, 0.538183, 0.477829, -0.529928, 0.700611, 0, 6, 0 )
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2592, 1.1345, -5.25192 )
+
+[node name="Spatial2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0854317, 1.5168, -5.19943 )
+
+[node name="Spatial3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.232, 1.7261, -5.19943 )
