@@ -17,11 +17,11 @@ onready var cam_coord = cam.translation
 func _input(event):
 	if event is InputEventScreenDrag:
 		print(event.relative)
-		if(cam.translation.x+event.relative.x * -0.003<= 3.735 && cam.translation.x+event.relative.x * -0.003>= -2.142):
+		if(cam.translation.x+event.relative.x * -0.003<= 4.35 && cam.translation.x+event.relative.x * -0.003>= -2.142):
 			cam.translate(Vector3(event.relative.x * -0.003, 0, 0))
 		else:
-			if(cam.translation.x+event.relative.x * -0.003> 3.735):
-				cam.translation.x=3.735
+			if(cam.translation.x+event.relative.x * -0.003> 4.35):
+				cam.translation.x=4.35
 			else:
 				cam.translation.x=-2.142
 
