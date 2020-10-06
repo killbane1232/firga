@@ -43,6 +43,7 @@ func _on_ItemList_item_selected(index):
 			var printer = load("res://models/Spatial.tscn")
 			var ass = printer.instance()
 			ass.visible=true
+			get_child(0).visible = false;
 			var end = get_parent()
 			print(name)
 			end.add_child(ass)
@@ -54,6 +55,7 @@ func _on_ItemList_item_selected(index):
 			var printer = load("res://models/Printer2.tscn")
 			var ass = printer.instance()
 			ass.visible=true
+			get_child(0).visible = false;
 			var end = get_parent()
 			print(name)
 			end.add_child(ass)
