@@ -117,6 +117,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.70694, 0 )
 shape = SubResource( 3 )
 
 [node name="Control" type="Control" parent="StaticBody"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
