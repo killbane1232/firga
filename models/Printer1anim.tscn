@@ -83,7 +83,7 @@ extents = Vector3( 1.2956, 1.35508, 1.29687 )
 transform = Transform( -0.35, 0, -1.14044e-07, 0, 0.35, 0, 1.14044e-07, 0, -0.35, 0, 0, 0 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 1.1, 0, -1.4492e-08, 0, 1.1, 0, 1.4492e-08, 0, 1.1, 0, -0.08682, 0 )
+transform = Transform( 1.15, 0, -1.51508e-08, 0, 1.15, 0, 1.51508e-08, 0, 1.15, 0, -0.0755223, 0 )
 
 [node name="printer1all" type="MeshInstance" parent="StaticBody"]
 mesh = ExtResource( 4 )
