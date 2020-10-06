@@ -102,9 +102,7 @@ func _on_ItemList_item_selected(index):
 		time["day"] += smth 
 	if index == 2:
 		print(emit_signal("moneycng", 10))
-		var spat = get_parent().get_parent().get_parent()
-		spat.get_parent().get_child(0).get_child(0).visible=true
-		spat.queue_free()
+		get_parent().get_parent().get_parent().queue_free()
 	mode = index
 	play("printer1")
 	print(current_animation)
