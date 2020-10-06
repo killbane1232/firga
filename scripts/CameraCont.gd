@@ -15,8 +15,8 @@ onready var cam = get_node(".")
 onready var cam_coord = cam.translation
 
 func _input(event):
-	if event is InputEventScreenDrag || event is InputEventMouse:
-		#print(event.relative)
+	if event is InputEventScreenDrag:
+		print(event.relative)
 		cam.translate(Vector3(event.relative.x * -0.001, 0, 0))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

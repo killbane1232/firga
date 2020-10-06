@@ -43,14 +43,14 @@ __meta__ = {
 }
 
 [node name="ItemList" parent="PrinterAddPlate/Control" instance=ExtResource( 3 )]
-anchor_left = 0.146
+anchor_left = 0.173
 anchor_top = 0.158
-anchor_right = 0.826
+anchor_right = 0.827
 anchor_bottom = 0.842
-margin_left = 278.12
-margin_top = 121.24
-margin_right = -242.28
-margin_bottom = -121.24
+margin_left = -0.0600052
+margin_top = 0.259995
+margin_right = 0.0599976
+margin_bottom = -0.260132
 custom_fonts/font = SubResource( 4 )
 max_text_lines = 2
 script = ExtResource( 2 )

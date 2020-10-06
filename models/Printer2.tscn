@@ -117,7 +117,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.70694, 0 )
 shape = SubResource( 3 )
 
 [node name="Control" type="Control" parent="StaticBody"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -125,6 +124,14 @@ __meta__ = {
 }
 
 [node name="ItemList" parent="StaticBody/Control" instance=ExtResource( 6 )]
+anchor_left = 0.187
+anchor_top = 0.121
+anchor_right = 0.813
+anchor_bottom = 0.879
+margin_left = -0.139999
+margin_top = 0.119995
+margin_right = 0.139954
+margin_bottom = -0.120117
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody"]
 stream = ExtResource( 8 )

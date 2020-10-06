@@ -39,10 +39,10 @@ __meta__ = {
 }
 
 [node name="Menu" type="Button" parent="Camera/Control"]
-anchor_left = 0.793231
-anchor_top = 0.0887782
-anchor_right = 0.949481
-anchor_bottom = 0.227474
+anchor_left = 0.606945
+anchor_top = 0.088993
+anchor_right = 0.951389
+anchor_bottom = 0.19516
 rect_clip_content = true
 custom_styles/hover = ExtResource( 7 )
 custom_styles/pressed = ExtResource( 5 )
@@ -61,11 +61,14 @@ __meta__ = {
 
 [node name="ExitMenu" type="Button" parent="Camera/Control"]
 visible = false
-anchor_left = 0.382024
-anchor_top = 0.568037
-anchor_right = 0.616399
-anchor_bottom = 0.648481
-margin_bottom = 3.05176e-05
+anchor_left = 0.301
+anchor_top = 0.368
+anchor_right = 0.708
+anchor_bottom = 0.449
+margin_left = -0.0452881
+margin_top = 0.099884
+margin_right = -0.0852356
+margin_bottom = -0.612305
 focus_neighbour_top = NodePath("../ChooseRoom")
 focus_neighbour_bottom = NodePath("../ExitGame")
 custom_styles/hover = ExtResource( 7 )
@@ -75,16 +78,19 @@ custom_styles/normal = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Exit Menu"
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="ExitGame" type="Button" parent="Camera/Control"]
 visible = false
-anchor_left = 0.381872
-anchor_top = 0.66932
-anchor_right = 0.616247
-anchor_bottom = 0.751151
-margin_top = -3.05176e-05
+anchor_left = 0.301
+anchor_top = 0.651
+anchor_right = 0.708
+anchor_bottom = 0.733
+margin_left = -0.0452271
+margin_top = 0.203247
+margin_right = -0.0851746
+margin_bottom = -0.0130615
 focus_neighbour_top = NodePath("../ExitMenu")
 custom_styles/hover = ExtResource( 7 )
 custom_styles/pressed = ExtResource( 5 )
@@ -93,16 +99,19 @@ custom_styles/normal = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Exit Game"
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="Options" type="Button" parent="Camera/Control"]
 visible = false
-anchor_left = 0.401311
-anchor_top = 0.35671
-anchor_right = 0.596623
-anchor_bottom = 0.43438
-margin_bottom = 3.05176e-05
+anchor_left = 0.311
+anchor_top = 0.46
+anchor_right = 0.698
+anchor_bottom = 0.53
+margin_left = -0.245224
+margin_top = -0.109497
+margin_right = 0.114807
+margin_bottom = 0.220459
 focus_neighbour_bottom = NodePath("../ChooseRoom")
 custom_styles/hover = ExtResource( 7 )
 custom_styles/pressed = ExtResource( 5 )
@@ -111,15 +120,19 @@ custom_styles/normal = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Options"
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="ChooseRoom" type="Button" parent="Camera/Control"]
 visible = false
-anchor_left = 0.354688
-anchor_top = 0.456227
-anchor_right = 0.64375
-anchor_bottom = 0.542218
+anchor_left = 0.247
+anchor_top = 0.546
+anchor_right = 0.757
+anchor_bottom = 0.632
+margin_left = 0.247375
+margin_top = 0.289551
+margin_right = 0.0474243
+margin_bottom = 0.278076
 focus_neighbour_top = NodePath("../Options")
 focus_neighbour_bottom = NodePath("../ExitMenu")
 custom_styles/hover = ExtResource( 7 )
@@ -129,18 +142,18 @@ custom_styles/normal = ExtResource( 6 )
 custom_fonts/font = ExtResource( 2 )
 text = "Choose Room"
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control"]
-anchor_left = 0.0484375
-anchor_top = 0.0887656
-anchor_right = 0.360938
-anchor_bottom = 0.177531
-margin_left = 1.0
+anchor_left = 0.064
+anchor_top = 0.0858704
+anchor_right = 0.489
+anchor_bottom = 0.153
+margin_left = 0.920002
 margin_top = 1.0
-margin_right = -199.0
-margin_bottom = -31.0
+margin_right = -152.08
+margin_bottom = -41.993
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 104, 31 )
