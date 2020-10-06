@@ -23,7 +23,7 @@ light_energy = 0.5
 shadow_enabled = true
 
 [node name="Spatial" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2592, 1.1345, -5.14786 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2592, 1.1345, -5.10583 )
 
 [node name="Spatial2" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0854317, 1.5168, -5.19943 )
