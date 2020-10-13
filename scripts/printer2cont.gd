@@ -54,8 +54,12 @@ func _process(delta):
 				#print(float(dlt)/(15.0*(2.0-float(mode))))
 				prc = float((1.0-float(dlt)/(10.0*(2.0-float(mode))))*float(height))
 				#print(prc)
-				box.translation.y = 1+prc
-				slider.translation.y = sldr+prc*sldrh
+				if(prc<=height):
+					box.translation.y = 1+prc
+					slider.translation.y = sldr+prc*sldrh
+				else:
+					box.translation.y = 1+height
+					slider.translation.y = sldr+height*sldrh
 	pass
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):
 	if event is InputEventScreenTouch || event is InputEventMouseButton:
