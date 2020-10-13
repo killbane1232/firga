@@ -44,7 +44,7 @@ func _process(delta):
 		if(dlts>=1):
 			dlts=0
 			var now = OS.get_datetime(true)
-			if(time["second"] == now["second"] && time["minute"] == now["minute"]):
+			if(time["second"] <= now["second"] && time["minute"] <= now["minute"]):
 				print("yeee")
 				play("printer2clr")
 				state = 2
