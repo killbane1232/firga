@@ -36,18 +36,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( -1.65291, 0, -5.36442e-07 ), Vector3( -0.257078, 0, -8.9407e-08 ), Vector3( 0, 0, 0 ) ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("printer 2 ray:translation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0, -1.47997, 0 ) ]
-}
 
 [sub_resource type="Animation" id=2]
 resource_name = "printer2clr"
@@ -90,7 +78,7 @@ mesh = ExtResource( 3 )
 material/0 = ExtResource( 7 )
 
 [node name="printer 2 ray" type="MeshInstance" parent="StaticBody/printer 2 full"]
-transform = Transform( 1, 0, -1.42109e-13, 0, 1, 0, 1.42109e-13, 0, 1, 0, -1.6, 0 )
+transform = Transform( 1, 0, -1.42109e-13, 0, 1, 0, 1.42109e-13, 0, 1, 0, -1.47997, 0 )
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 7 )
 
