@@ -71,6 +71,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 				print(emit_signal("moneycng", 20*(2-mode)))
 				end.remove_child(ass)
 				print("erasing")
+				slider.translation.y = sldr
 				state = 0
 			print("click")
 			#var printer = load("res://Spatial.tscn")
