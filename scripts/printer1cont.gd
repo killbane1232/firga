@@ -17,6 +17,7 @@ var cam
 var prc
 var slider
 var box
+var dlts
 
 var sldr=-0.505
 var height
@@ -37,21 +38,24 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var now = OS.get_datetime(true)
 	if(state == 1):
-		if(time["second"] <= now["second"] && time["minute"] <= now["minute"] && time["hour"] <= now["hour"]):
-			print("yeee")
-			play("printer1clr")
-			state = 2
-			audio.play()
-			prc = 1
-		else:
-			var dlt = float((((time["day"]-now["day"])*24+time["hour"]-now["hour"])*60+time["minute"]-now["minute"])*60+time["second"]-now["second"])
-			#print(float(dlt)/(15.0*(2.0-float(mode))))
-			prc = float((1.0-float(dlt)/(15.0*(2.0-float(mode))))*float(height))
-			#print(prc)
-			box.translation.y = 1+prc
-			slider.translation.y = sldr+prc
+		dlts +=delta
+		if(dlts>=1):
+			dlts=0
+			var now = OS.get_datetime(true)
+			if(time["second"] <= now["second"] && time["minute"] <= now["minute"] && time["hour"] <= now["hour"]):
+				print("yeee")
+				play("printer1clr")
+				state = 2
+				audio.play()
+				prc = 1
+			else:
+				var dlt = float((((time["day"]-now["day"])*24+time["hour"]-now["hour"])*60+time["minute"]-now["minute"])*60+time["second"]-now["second"])
+				#print(float(dlt)/(15.0*(2.0-float(mode))))
+				prc = float((1.0-float(dlt)/(15.0*(2.0-float(mode))))*float(height))
+				#print(prc)
+				box.translation.y = 1+prc
+				slider.translation.y = sldr+prc
 			
 
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):
@@ -82,6 +86,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 func _on_ItemList_item_selected(index):
 	print(index)
 	var printer
+	dlts=0
 	if index == 0:
 		printer = load("res://models/CSG/GirlCSG.tscn")
 		ass = printer.instance()

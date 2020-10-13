@@ -25,24 +25,12 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -0.486235 ), Vector3( 0, 0, 0.0965374 ), Vector3( 0, 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("printer1slider:translation")
+tracks/1/path = NodePath("printer1slider/printer1extruder:translation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, -0.487696, 0 ), Vector3( 0, -0.487696, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("printer1slider/printer1extruder:translation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
@@ -106,7 +94,7 @@ material/0 = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.843042, 0 )
 
 [node name="printer1slider" type="MeshInstance" parent="StaticBody/printer1all"]
-transform = Transform( 1, 0, 8.52651e-14, 0, 1, 0, -8.52651e-14, 0, 1, 0, -0.505225, 0 )
+transform = Transform( 1, 0, 8.52651e-14, 0, 1, 0, -8.52651e-14, 0, 1, 0, -0.487696, 0 )
 mesh = ExtResource( 5 )
 material/0 = ExtResource( 1 )
 
