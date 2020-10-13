@@ -22,12 +22,10 @@ __meta__ = {
 }
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, -2.33125, 3.37061, -2.47868 )
+transform = Transform( 0.981627, 0.0265555, -0.188952, 0, 0.990268, 0.139173, 0.190809, -0.136616, 0.972074, -0.870452, 2.52569, -3.26224 )
 projection = 1
 fov = 80.0
-size = 6.0
-near = 0.86
-far = 5.0
+size = 5.0
 script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="Camera"]
