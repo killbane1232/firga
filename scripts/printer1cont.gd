@@ -120,7 +120,7 @@ func _on_ItemList_item_selected(index):
 		time = OS.get_datetime(true)
 		state = 1
 		prc = 0
-		height = 0.62
+		height = 0.7
 		time["second"]+=15
 		var smth = time["second"]/60
 		time["second"] = time["second"]%60

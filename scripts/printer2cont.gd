@@ -117,7 +117,7 @@ func _on_ItemList_item_selected(index):
 		box = ass.get_child(0)
 		time = OS.get_datetime(true)
 		state = 1
-		height = 0.62
+		height = 0.7
 		time["second"]+=10
 		var smth = time["second"]/60
 		time["second"] = time["second"]%60
