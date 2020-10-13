@@ -14,6 +14,14 @@ var audio
 var List
 var cont
 var cam
+var prc
+var slider
+var box
+
+var sldr=-1.6
+var sldrh=2.9/1.5
+var height
+
 signal moneycng
 
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +32,7 @@ func _ready():
 	end = get_parent().get_child(2)
 	audio = get_parent().get_parent().get_child(3)
 	state = 0
+	slider = get_parent().get_child(0)
 	cam = get_node("/root/Spatial/Camera")
 	connect("moneycng",cam,"_on_moneycng")
 	pass # Replace with function body.
@@ -36,15 +45,13 @@ func _process(delta):
 			play("printer2clr")
 			state = 2
 			audio.play()
-			var printer
-			if mode==0:
-				printer = load("res://models/Spatial.tscn")
-			if mode==1:
-				printer = load("res://models/Print1.tscn")
-			ass = printer.instance()
-			ass.visible=true
-			print(name)
-			end.add_child(ass)
+		else:
+			var dlt = float((((time["day"]-now["day"])*24+time["hour"]-now["hour"])*60+time["minute"]-now["minute"])*60+time["second"]-now["second"])
+			#print(float(dlt)/(15.0*(2.0-float(mode))))
+			prc = float((1.0-float(dlt)/(10.0*(2.0-float(mode))))*float(height))
+			print(prc)
+			box.translation.y = 1+prc
+			slider.translation.y = sldr+prc*sldrh
 	pass
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):
 	if event is InputEventScreenTouch || event is InputEventMouseButton:
@@ -73,9 +80,17 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 
 func _on_ItemList_item_selected(index):
 	print(index)
+	var printer
 	if index == 0:
+		printer = load("res://models/CSG/GirlCSG.tscn")
+		ass = printer.instance()
+		ass.visible=true
+		print(name)
+		end.add_child(ass)
+		box = ass.get_child(0)
 		time = OS.get_datetime(true)
 		state = 1
+		height = 1.5
 		time["second"]+=20
 		var smth = time["second"]/60
 		time["second"] = time["second"]%60
@@ -88,8 +103,15 @@ func _on_ItemList_item_selected(index):
 		time["day"] += smth 
 		print(time)
 	if index == 1:
+		printer = load("res://models/CSG/BoxCSG.tscn")
+		ass = printer.instance()
+		ass.visible=true
+		print(name)
+		end.add_child(ass)
+		box = ass.get_child(0)
 		time = OS.get_datetime(true)
 		state = 1
+		height = 0.62
 		time["second"]+=10
 		var smth = time["second"]/60
 		time["second"] = time["second"]%60

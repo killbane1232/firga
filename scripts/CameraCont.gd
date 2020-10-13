@@ -6,6 +6,7 @@ extends Camera
 var money = 15
 var ite
 var txt
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	txt = get_child(0).get_child(5)

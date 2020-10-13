@@ -90,12 +90,12 @@ mesh = ExtResource( 3 )
 material/0 = ExtResource( 7 )
 
 [node name="printer 2 ray" type="MeshInstance" parent="StaticBody/printer 2 full"]
-transform = Transform( 1, 0, -1.42109e-13, 0, 1, 0, 1.42109e-13, 0, 1, 0, -1.47997, 0 )
+transform = Transform( 1, 0, -1.42109e-13, 0, 1, 0, 1.42109e-13, 0, 1, 0, -1.6, 0 )
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 7 )
 
 [node name="printer 2 lay" type="MeshInstance" parent="StaticBody/printer 2 full/printer 2 ray"]
-transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0 )
+transform = Transform( 1, 0, 8.52651e-14, 0, 1, 0, -8.52651e-14, 0, 1, 0, 0, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 7 )
 

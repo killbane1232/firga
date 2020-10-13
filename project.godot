@@ -21,6 +21,10 @@ boot_splash/image="res://bootsplash.png"
 config/icon="res://heart.png"
 config/low_processor_mode=false
 
+[audio]
+
+depth/hdr.mobile=false
+
 [autoload]
 
 PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
@@ -67,7 +71,8 @@ quality/reflections/high_quality_ggx.mobile=true
 quality/shading/force_vertex_shading=true
 quality/shading/force_lambert_over_burley=true
 quality/shading/force_blinn_over_ggx=true
+quality/depth_prepass/disable_for_vendors="PowerVR,Apple"
 quality/filters/use_nearest_mipmap_filter=true
-quality/filters/msaa=4
+quality/filters/msaa=3
 quality/depth/hdr.mobile=true
 environment/default_environment="res://default_env.tres"
