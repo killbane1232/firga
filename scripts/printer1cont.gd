@@ -47,9 +47,9 @@ func _process(delta):
 			prc = 1
 		else:
 			var dlt = float((((time["day"]-now["day"])*24+time["hour"]-now["hour"])*60+time["minute"]-now["minute"])*60+time["second"]-now["second"])
-			print(float(dlt)/(15.0*(2.0-float(mode))))
+			#print(float(dlt)/(15.0*(2.0-float(mode))))
 			prc = float((1.0-float(dlt)/(15.0*(2.0-float(mode))))*float(height))
-			print(prc)
+			#print(prc)
 			box.translation.y = 1+prc
 			slider.translation.y = sldr+prc
 			
