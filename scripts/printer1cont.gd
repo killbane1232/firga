@@ -35,6 +35,7 @@ func _ready():
 	connect("moneycng",cam,"_on_moneycng")
 	print(cam.name)
 	end = get_parent().get_child(1).get_child(0)
+	return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -60,6 +61,7 @@ func _process(delta):
 				else:
 					box.translation.y = 1+height
 					slider.translation.y = sldr+height
+	return
 			
 
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):
@@ -86,6 +88,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 			#end.add_child(ass)
 		else:
 			print("nope") 
+	return
 
 
 func _on_ItemList_item_selected(index):
@@ -144,6 +147,7 @@ func _on_ItemList_item_selected(index):
 	List.unselect(index)
 	#List.visible=false
 	cont.visible=false
+	return
 
 
 func _on_Control_gui_input(event):
@@ -151,4 +155,5 @@ func _on_Control_gui_input(event):
 		if event.is_pressed():
 			#List.visible=false
 			cont.visible=false
+	return
 

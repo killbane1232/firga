@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://models/clear/printer 2 lay.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://models/clear/printer 2 ray.obj" type="ArrayMesh" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://controls/ItemList.tscn" type="PackedScene" id=6]
 [ext_resource path="res://models/printers.tres" type="Material" id=7]
 [ext_resource path="res://Sound/Default.wav" type="AudioStream" id=8]
+[ext_resource path="res://fonts/dynamicfont.tres" type="DynamicFont" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "printer2"
@@ -121,6 +122,7 @@ margin_left = -0.139999
 margin_top = 0.119995
 margin_right = 0.139954
 margin_bottom = -0.120117
+custom_fonts/font = ExtResource( 9 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody"]
 stream = ExtResource( 8 )

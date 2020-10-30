@@ -8,9 +8,9 @@ extends ItemList
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_item("Printer",load("res://buttonimg/printer1.tres"))
-	add_item("Printer2",load("res://buttonimg/printer2.tres"))
-	pass # Replace with function body.
+	add_item("Printer",load("res://Images/printer1.tres"))
+	add_item("Printer2",load("res://Images/printer2.tres"))
+	return
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

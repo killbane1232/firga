@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/girl.PNG-1ef7d4be50ad7e28f2b8591644344ece.stex"
+path="res://.import/printer1.PNG-37c86fdff1b20747fdde99874781569f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://buttonimg/girl.PNG"
-dest_files=[ "res://.import/girl.PNG-1ef7d4be50ad7e28f2b8591644344ece.stex" ]
+source_file="res://Images/printer1.PNG"
+dest_files=[ "res://.import/printer1.PNG-37c86fdff1b20747fdde99874781569f.stex" ]
 
 [params]
 

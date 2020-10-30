@@ -36,7 +36,7 @@ func _ready():
 	slider = get_parent().get_child(0)
 	cam = get_node("/root/Spatial/Camera")
 	connect("moneycng",cam,"_on_moneycng")
-	pass # Replace with function body.
+	return
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(state == 1):
@@ -60,7 +60,7 @@ func _process(delta):
 				else:
 					box.translation.y = 1+height
 					slider.translation.y = sldr+height*sldrh
-	pass
+	return
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):
 	if event is InputEventScreenTouch || event is InputEventMouseButton:
 		if event.is_pressed():
@@ -85,7 +85,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 			#end.add_child(ass)
 		else:
 			print("nope") 
-	pass # Replace with function body.
+	return
 
 func _on_ItemList_item_selected(index):
 	print(index)
@@ -141,11 +141,11 @@ func _on_ItemList_item_selected(index):
 	List.unselect(index)
 	#List.visible=false
 	cont.visible=false
-	pass # Replace with function body.
+	return
 
 func _on_Control_gui_input(event):
 	if event is InputEventScreenTouch || event is InputEventMouseButton:
 		if event.is_pressed():
 			#List.visible=false
 			cont.visible=false
-	pass # Replace with function body.
+	return

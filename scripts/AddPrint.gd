@@ -14,7 +14,7 @@ func _ready():
 	cont = get_child(1)
 	ite = cont.get_child(0)	
 	cam = get_node("/root/Spatial/Camera")
-	pass # Replace with function body.
+	return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -33,7 +33,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 			#end.add_child(ass)
 		else:
 			print("nope") 
-	pass # Replace with function body.
+	return
 
 
 func _on_ItemList_item_selected(index):
@@ -73,7 +73,7 @@ func _on_ItemList_item_selected(index):
 	ite.unselect(index)
 	#ite.visible=false
 	cont.visible=false
-	pass # Replace with function body.
+	return
 
 
 func _on_Control_gui_input(event):
@@ -81,5 +81,4 @@ func _on_Control_gui_input(event):
 		if event.is_pressed():
 			#ite.visible=false
 			cont.visible=false
-			
-	pass # Replace with function body.
+	return
