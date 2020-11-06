@@ -49,6 +49,7 @@ func _process(delta):
 				play("printer2clr")
 				state = 2
 				audio.play()
+				box.translation.y = sldr+height+100
 			else:
 				var dlt = float((((time["day"]-now["day"])*24+time["hour"]-now["hour"])*60+time["minute"]-now["minute"])*60+time["second"]-now["second"])
 				#print(float(dlt)/(15.0*(2.0-float(mode))))
@@ -76,7 +77,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 				end.remove_child(ass)
 				print("erasing")
 				slider.translation.y = sldr
-				box.translation.y = sldr+height
+				box.translation.y = sldr+height+100
 				state = 0
 			print("click")
 			#var printer = load("res://Spatial.tscn")
