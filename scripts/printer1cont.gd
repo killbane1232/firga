@@ -79,6 +79,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 				end.remove_child(ass)
 				print("erasing")
 				state = 0
+				box.translation.y = sldr+height
 				slider.translation.y = sldr
 			print("click")
 			#var printer = load("res://Spatial.tscn")
