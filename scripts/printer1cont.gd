@@ -18,15 +18,21 @@ var prc
 var slider
 var box
 var dlts
-
-var sldr=-0.505
+var sc
+var sldr
 var height
 
 signal moneycng
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	sldr = get_parent().get_child(2).translation.y
 	cont = get_parent().get_parent().get_child(2)
 	List = cont.get_child(0)
+	sc = get_parent().get_parent().scale.x
+	if(sc<=1):
+		sc*=2.5
+	else:
+		sc=1
 	print(List.name)
 	slider = get_parent().get_child(2)
 	audio = get_parent().get_parent().get_child(3)
@@ -34,7 +40,7 @@ func _ready():
 	cam = get_node("/root/Spatial/Camera")
 	connect("moneycng",cam,"_on_moneycng")
 	print(cam.name)
-	end = get_parent().get_child(1).get_child(0)
+	end = get_parent().find_node("Spatial")
 	return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,7 +52,7 @@ func _process(delta):
 			var now = OS.get_datetime(true)
 			if(time["second"] <= now["second"] && time["minute"] <= now["minute"] && time["hour"] <= now["hour"]):
 				print("yeee")
-				play("printer1clr")
+				play("printclr")
 				state = 2
 				audio.play()
 				prc = 1
@@ -58,10 +64,10 @@ func _process(delta):
 				#print(prc)
 				if(prc<=height):
 					box.translation.y = 1+prc
-					slider.translation.y = sldr+prc
+					slider.translation.y = sldr+prc/sc
 				else:
 					box.translation.y = 1+height
-					slider.translation.y = sldr+height
+					slider.translation.y = sldr+height/sc
 	return
 			
 
@@ -144,7 +150,7 @@ func _on_ItemList_item_selected(index):
 		print(emit_signal("moneycng", 10))
 		get_parent().get_parent().get_parent().queue_free()
 	mode = index
-	play("printer1")
+	play("print")
 	print(current_animation)
 	List.unselect(index)
 	#List.visible=false
