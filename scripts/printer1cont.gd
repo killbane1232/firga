@@ -28,6 +28,10 @@ func _ready():
 	sldr = get_parent().get_child(2).translation.y
 	cont = get_parent().get_parent().get_child(2)
 	List = cont.get_child(0)
+	if(get_parent().name == "printer 2 full"):
+		List.a = 2;
+	else:
+		List.a = 1;
 	sc = get_parent().get_parent().scale.x
 	if(sc<=1):
 		sc*=2.5
@@ -103,7 +107,7 @@ func _on_ItemList_item_selected(index):
 	print(index)
 	var printer
 	dlts=0
-	if index == 0:
+	if index == 2:
 		printer = load("res://models/CSG/GirlCSG.tscn")
 		ass = printer.instance()
 		ass.visible=true
@@ -146,10 +150,10 @@ func _on_ItemList_item_selected(index):
 		smth = time["hour"]/24
 		time["hour"] = time["hour"]%24
 		time["day"] += smth 
-	if index == 2:
+	if index == 0:
 		print(emit_signal("moneycng", 10))
 		get_parent().get_parent().get_parent().queue_free()
-	mode = index
+	mode = 2-index
 	play("print")
 	print(current_animation)
 	List.unselect(index)

@@ -39,6 +39,7 @@ func _ready():
 	return
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	return
 	if(state == 1):
 		dlts +=delta
 		if(dlts>=1):
@@ -93,7 +94,7 @@ func _on_ItemList_item_selected(index):
 	print(index)
 	dlts=0
 	var printer
-	if index == 0:
+	if index == 2:
 		printer = load("res://models/CSG/GirlCSG.tscn")
 		ass = printer.instance()
 		ass.visible=true
@@ -134,7 +135,7 @@ func _on_ItemList_item_selected(index):
 		smth = time["hour"]/24
 		time["hour"] = time["hour"]%24
 		time["day"] += smth 
-	if index == 2:
+	if index == 0:
 		print(emit_signal("moneycng", 10))
 		get_parent().get_parent().get_parent().queue_free()
 	play("printer2")

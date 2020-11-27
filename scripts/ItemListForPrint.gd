@@ -12,7 +12,8 @@ func se():
 func _ready():
 	add_item("Erase",load("res://Images/cross.tres"))
 	add_item("Cube",load("res://Images/cube.tres"))
-	add_item("Girl",load("res://Images/girl.tres"))
+	if(a>=2):
+		add_item("Girl",load("res://Images/girl.tres"))
 	return
 
 
